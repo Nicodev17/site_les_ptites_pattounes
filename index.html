@@ -4,22 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les P'tites Pattounes - Toilettage à domicile</title>
     <link rel="stylesheet" href="style/style.css">
+    <title>Les P'tites Pattounes - Toilettage</title>
 </head>
 <body>
-    <div id="content">
-        <img src="./media/logo.png" alt="Logo les Ptites Pattounes">
-        <h1>Site Les P'tites Pattounes bientôt disponible ! ⏳</h1>
-        <p>En attendant retrouvez moi sur les réseaux sociaux :</p>
-        <div id="logos-part">
-            <a href="https://www.facebook.com/LesPtitesPattounes" target="_blank">
-                <img src="media/facebook.png" alt="Logo facebook" class="logo-social">
+    <!-- HEADER -->
+    <header>
+        
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="index.html">
+                <img src="media/logo.png" alt="Logo" id="logo">
             </a>
-            <a href="https://www.instagram.com/invites/contact/?i=leixmqew9gz7&utm_content=oc0sdb5" target="_blank">
-                <img src="media/instagram.png" alt="Logo instagram" class="logo-social">
-            </a>
+
+            <ul>
+                <li class="part-link">Présentation</li>
+                <li class="part-link">Photos</li>
+                <li class="part-link">Tarifs</li>
+                <li class="part-link">Contact</li>
+            </ul>
+
+            <!-- Liens réseaux sociaux -->
+            <div>
+                <a href="https://www.facebook.com/LesPtitesPattounes" target="_blank">
+                    <img src="media/facebook.png" alt="Logo fb" class="logo-social"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=leixmqew9gz7&utm_content=oc0sdb5" target="_blank">
+                    <img src="media/instagram.png" alt="Logo insta" class="logo-social"></a>
+            </div>
+        </nav>        
+    </header>
+
+    <div class="contents-part">
+
+        <img src="media/patte.png" alt="patte" class="pattes">
+        <img src="media/patte.png" alt="patte" class="pattes">
+        <img src="media/patte.png" alt="patte" class="pattes">
+
+        <!-- INTRO -->
+        <div class="intro-part content active">
+            <div>
+                <img src="media/img-hero.jpg" alt="Camion de Toilettage">
+            </div>
+            
+            <div id="box-description">
+                <h1>Les P'tites Pattounes</h1>
+                <p class="texte">
+                    Passionnée des animaux depuis ma plus jeune enfance, j'ai dédié toute mon énergie et mon amour à nos amis les animaux. 
+                    </br></br>
+                    Je suis diplômée Assistante Vétérinaire de l'école SupSanté Animale de Montaigu et diplômée Toiletteuse de la formation SnobDog Academy.
+                    J'ai exercé 3 ans en clinique vétérinaire et me voilà toiletteuse itinérante à votre service dans mon camion tout aménagé pour accueillir vos boules de poils.  
+                    </br></br>
+                    Le camion est spécialement équipé pour les moyennes et grandes races de chiens. J'accueille les chiens de toutes tailles et ainsi que les chats. 
+                    J'interviens sur tout le pays de Retz et le nord de la Vendée. Pour plus d'informations n'hésitez à me contacter. 
+                    </br></br>
+                    A bientôt ! 🐶
+                    </br></br>
+                    Diana, Les P'tites Pattounes 🐾
+                </p>
+                    
+            </div>
         </div>
+
+        <!-- PHOTOS -->
+        <div class="photo-part content">
+            <h2>PHOTOS</h2>
+            <h3>Les avant-après ✂</h3>
+            <div class="grid-container"></div>
+
+            <h3 id="titre-2-photos">Les Bains 🛁</h3>
+            <div class="grid-container-bis"></div>
+        </div>
+
+        <!-- TARIFS -->
+        <div class="tarifs-part content">
+            <h2>TARIFS</h2>
+            <h3>Informations générales</h3>
+            <p class="subtitle">Chaque prestation comprend :</p>
+                <ul>
+                    <li>le bain avec des shampoings et des soins adaptés aux poils et à la peau de votre animal</li>
+                    <li>le séchage</li>
+                    <li>le démêlage</li>
+                    <li>la coupe / la tonte / l'épilation</li>
+                    <li>le nettoyage des oreilles et des yeux</li>
+                    <li>l'entretien des zones d'hygiènes</li>
+                    <li>le dégagement des coussinets </li>
+                    <li>la coupe de griffes</li>
+                    <li>les frais de déplacements</li>
+                </ul>
+            <p>
+                La première heure est indivisible et ensuite nous passons en tarif à la demie
+                heure. Chaque demie heure commencée et due.
+            </p>
+            <p>
+                Un supplément démêlage pourra éventuellement vous êtres facturé si votre animal
+                présente trop de noeuds. Une tonte devra être envisagée pour son bien être et son confort
+                si le démêlage est impossible.
+            </p>
+            <p>
+                Les coupes de griffes se font uniquement si j'interviens le jour même dans le secteur alentour
+                et que cela ne me fait pas un trop grand détour 🚐
+            </p>
+            <p class="subtitle">Coupe de griffes : 5 €</p>
+            <p>
+                ⚠ Pour le bien-être de votre animal et la sécurité de tous, je me réserve le droit d'arrêter le Toilettage
+                si votre animal se montre trop agité et/ou trop aggressif. 😾
+            </p>
+            <p class="subtitle">Suppléments possibles</p>
+            <p>
+                • Démêlage : 30€
+                <br>
+                • Shampoing antiparasitaire : 10€
+            </p>
+            <p> ⚠ Pour la santé de votre animal il est conseillé de le protéger contre les puces et les tiques et de le vermifuger 
+                plusieurs fois par an afin d'éviter les problèmes de santé causés par ces méchantes bestioles 🐛</p>
+
+                <!-- Images des tarifs -->
+            <img src="media/tarif-1.jpg" alt="Tarifs Chiens">
+            <img src="media/tarif-2.jpg" alt="Tarifs Chats">
+        </div>
+
+        <!-- CONTACT -->
+        <div class="contact-part content">
+            <h2>CONTACTEZ-MOI !</h2>
+            
+            <div id="box-contact">
+                <p class="subtitle">Tel 📞</p>
+                <a href="tel:+33613197843">06 13 19 78 43</a>
+    
+                <p class="subtitle">Mail 📩</p>
+                <a href="mailto:lesptitespattounes.dm@gmail.com">lesptitespattounes.dm@gmail.com</a>
+    
+                <!-- Liens réseaux sociaux -->
+                <p class="subtitle">Mes réseaux sociaux 📱</p>
+                <div>
+                    <a href="https://www.facebook.com/LesPtitesPattounes" target="_blank">
+                        <img src="media/facebook.png" alt="Logo fb" class="logo-social"></a>
+                    <a href="https://www.instagram.com/invites/contact/?i=leixmqew9gz7&utm_content=oc0sdb5" target="_blank">
+                        <img src="media/instagram.png" alt="Logo insta" class="logo-social"></a>
+                </div>
+            </div>
+
+            <div id="box-horaires">
+                <p class="subtitle">Horaires d'ouverture du camion 🕒</p>
+                <p>Du lundi au vendredi de 9h - 18h</p>
+                <p>Le samedi de 9h à 12h30</p>
+            </div>
+
+        </div>
+
     </div>
+
+    <footer>
+        <p>Les P'tites Pattounes © • Toilettage à domicile • 2022</p>
+    </footer>
+
+    <script src="src/main.js"></script>
 </body>
 </html>

@@ -1,41 +1,60 @@
+/* ---------- GENERAL ---------- */
 html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white(95, 216, 247);
 }
 
-body {
-    background: rgb(95, 216, 247);
-}
+/* ---------- HEADER ---------- */
 
-#content {
+/* BARRE DE NAVIGATION */
+nav {
     width: 100%;
-    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-img {
-    width: 200px;
-    border-radius: 50%;
-}
-
-h1, p {
-    font-family: Arial;
+    background-color: rgb(95, 216, 247);
     color: white;
-    padding: 15px;
-    text-align: center;
 }
 
-p {
-    font-size: 1.2em;
+#logo {
+    width: 150px;
+    border-radius: 50%;
+    margin: 10px 0;
 }
 
-#logos-part {
+nav ul {
+    width: 40%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    /* border: 2px solid rgb(87, 87, 214); */
+}
+
+nav ul li {
+    width: 140px;
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 0 10px;
+}
+
+nav ul li:hover {
+    background: white;
+    color: rgb(95, 216, 247);
+    cursor: pointer;
+    transition: background 0.1s ease-in;
+}
+
+.part-link.active {
+    background: white;
+    color: rgb(95, 216, 247);
 }
 
 .logo-social {
@@ -45,16 +64,380 @@ p {
     border-radius: 0%;
 }
 
+/* ---------- CONTENU ---------- */
+
+.contents-part {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 120px;
+    /* border: 2px solid rgb(87, 87, 214); */
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.pattes {
+    position: absolute;
+    width: 150px;
+    opacity: 60%;
+    z-index: -10;
+}
+
+.pattes:nth-child(1) {
+    left: 40px;
+    top: 250px;
+    transform: rotate(-15deg);
+}
+
+.pattes:nth-child(2) {
+    left:150px;
+    top: 460px;
+    transform: rotate(15deg);
+}
+
+.pattes:nth-child(3) {
+    left: 80px;
+    top: 700px;
+    transform: rotate(-15deg);
+}
+
+/**** SECTION INTRO ****/
+
+
+.intro-part img {
+    width: 600px;
+    border-radius: 40px;
+}
+
+#box-description {
+    width: 50%;
+    margin-left: 80px;
+    /* border: 4px solid rgb(158, 94, 10); */
+}
+
+h1 {
+    font-size: 2.3em;
+    color: rgb(95, 216, 247);
+}
+
+.texte {
+    font-size: 1.1em;
+    color:rgb(95, 95, 95);
+    text-align: justify;
+}
+
+/**** AUTRES SECTIONS ****/
+
+h2 {
+    font-size: 1.7em;
+    color: rgb(160, 140, 250);
+}
+
+h3 {
+    font-size: 1.4em;
+    /* color: rgb(95, 216, 247); */
+    color: rgb(153, 132, 250);
+    margin-bottom: 40px;
+}
+
+#titre-2-photos {
+    margin-top: 100px;
+}
+
+/**** SECTION PHOTOS ****/
+.photo-part {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -- Grille -- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 0.5fr));
+    grid-row-gap: 2.5em;
+    grid-column-gap: 1.5em;
+    justify-content: center;
+}
+
+.grid-container-bis {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 0.5fr));
+    grid-gap: 2em; 
+    justify-content: center;
+}
+
+.grid-container img, .grid-container-bis img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.photo-listing {
+    position: relative;
+}
+
+.photo-image {
+    line-height: 0;
+}
+
+.photo-image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.photo-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(28, 173, 230, 0.4);
+     
+    /* Style de police */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+     
+    /* Texte au centre*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Cachage du titre par defaut */
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+/* Affichage du titre au survol */
+.photo-listing:hover .photo-title {
+    opacity: 1;
+}
+
+/**** SECTION TARIFS ****/
+.tarifs-part {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid pink; */
+}
+
+.tarifs-part p, .tarifs-part li {
+    text-align: justify;
+    width: 70%;
+    /* border: 3px solid greenyellow; */
+    color:rgb(95, 95, 95);
+}
+
+.subtitle {
+    font-weight: bold;
+    color:rgb(95, 95, 95);
+    font-size: 1.1em;
+}
+
+
+.tarifs-part img {
+    max-width: 600px;
+    margin: 60px 0 60px 0;
+    border-radius: 15px;
+}
+
+/**** SECTION CONTACT ****/
+.contact-part {
+    display: none;
+    flex-direction: column;
+    /* border: 3px solid greenyellow; */
+}
+
+#box-contact {
+    width: 50%;
+    background: rgba(95, 217, 247, 0.164);
+    padding: 40px 50px;
+    border-radius: 20px;
+}
+
+#box-contact p, #box-contact a {
+    text-align: left;
+    color:rgb(95, 95, 95);
+}
+
+#box-contact .subtitle:not(#box-contact .subtitle:nth-child(1)) {
+    /* border: 3px solid greenyellow; */
+    margin-top: 35px;
+}
+
+#box-contact a {
+    text-decoration: none;
+}
+
+#box-contact .logo-social {
+    filter: invert(30%);
+}
+
+#box-horaires {
+    width: 50%;
+    margin-top: 40px;
+    color:rgb(95, 95, 95);
+    text-align: center;
+}
+
+#box-horaires .subtitle {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/*---------- FOOTER ----------*/
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(95, 216, 247);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ---------- MEDIA QUERIES RESPONSIVE ---------- */
+
+/* ---- FORMAT TABLETTES ---- */
+@media  screen and (max-width: 1300px) {
+
+    /* NAVBAR */
+    nav {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #logo {
+        width: 90px;
+    }
+
+    nav ul {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        /* border: 2px solid rgb(87, 87, 214); */
+    }
+
+    nav ul li {
+        width: 90px;
+        font-size: 0.7em;
+        padding: 6px 10px;
+        margin: 0 5px;
+    }
+
+    nav .logo-social {
+        width: 40px;
+        margin: 0px 10px;
+        display: none;
+    }
+
+    /* Stickers Pattes */
+    .pattes {
+        display: none;
+    }
+
+    .content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        /* border: 2px solid rgb(87, 87, 214); */
+    }
+
+    #box-description {
+        width: 70%;
+        margin-left: 0px;
+        /* border: 4px solid rgb(158, 94, 10); */
+    }
+
+    /**** SECTION PHOTOS ****/
+    .photo-part {
+        display: none;
+    }
+
+    /**** SECTION TARIFS ****/
+    .tarifs-part {
+        display: none;
+    }
+
+    .tarifs-part p {
+        text-align: justify;
+        width: 80%;
+        /* border: 3px solid greenyellow; */
+    }
+
+    .tarifs-part img {
+        max-width: 400px;
+    }
+
+    /**** SECTION CONTACT ****/
+    .contact-part {
+        display: none;
+    }
+
+}
+
 /* ---- FORMAT MOBILE ---- */
 @media  screen and (max-width: 700px) {
 
-    h1 {
-        font-size: 1.5em;
-        padding: 25px;
+    .content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        /* border: 2px solid rgb(87, 87, 214); */
     }
 
-    p {
-        padding: 0 35px;
+    #box-description {
+        width: 90%;
+        margin-left: 0px;
+        /* border: 4px solid rgb(158, 94, 10); */
     }
+
+    /**** SECTION PHOTOS ****/
+    .photo-part {
+        display: none;
+    }
+
+    /**** SECTION TARIFS ****/
+    .tarifs-part {
+        display: none;
+    }
+
+    /**** SECTION CONTACT ****/
+    .contact-part {
+        display: none;
+    }
+
+    #box-contact {
+        width: 75%;
+        background: rgba(95, 217, 247, 0.418);
+        padding: 40px 50px;
+        border-radius: 20px;
+    }
+
 
 }
