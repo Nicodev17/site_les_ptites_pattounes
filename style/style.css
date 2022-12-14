@@ -402,12 +402,33 @@ footer p {
 /* ---- FORMAT MOBILE ---- */
 @media  screen and (max-width: 700px) {
 
+    nav a {
+        margin-left: 10px;
+    }
+
+    nav a:not(nav a:nth-child(1)) {
+        display: none;  
+    }
+    
+    nav ul {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul li {
+        width: 90px;
+        padding: 5px 0px;
+        margin: 0px;
+    }
+
     .content {
         width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 80px;
+        margin-top: 30px;
         /* border: 2px solid rgb(87, 87, 214); */
     }
 
@@ -415,6 +436,10 @@ footer p {
         width: 90%;
         margin-left: 0px;
         /* border: 4px solid rgb(158, 94, 10); */
+    }
+
+    .intro-part img {
+        width: 100%;
     }
 
     /**** SECTION PHOTOS ****/
@@ -427,6 +452,20 @@ footer p {
         display: none;
     }
 
+    .tarifs-part p {
+        width: 100%;
+    }
+
+    .tarifs-part li {
+        width: 80%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .tarifs-part img {
+        width: 100%;
+    }
+
     /**** SECTION CONTACT ****/
     .contact-part {
         display: none;
@@ -434,10 +473,29 @@ footer p {
 
     #box-contact {
         width: 75%;
-        background: rgba(95, 217, 247, 0.418);
+        background: rgba(95, 217, 247, 0.233);
         padding: 40px 50px;
         border-radius: 20px;
     }
 
+    #box-horaires {
+        width: 100%;
+    }
+    
+    #box-horaires .subtitle {
+        margin-bottom: 40px;
+    }
+
+    #box-horaires p:not(#box-horaires .subtitle) {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    /* FOOTER */
+
+    footer p {
+        font-size: 0.9em;
+        padding: 0 30px;
+    }
 
 }
