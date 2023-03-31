@@ -63,8 +63,36 @@ function addingImagesOther() {
         newImg.setAttribute("src", "media/gallery-other/chien-" + i + ".jpg");
         document.querySelector(".grid-container-bis").appendChild(newArticle);
 
-        console.log(newImg.src);
+        // console.log(newImg.src);
    }
 
 }
+
+function scrollToTop() {
+    const arrowUp = document.querySelector('#box-arrow');
+    
+    arrowUp.addEventListener('click', event => {
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth'
+          });
+    });
+
+    let firstLink = document.querySelector('.first-link');
+    arrowUp.style.display = "none";
+
+    firstLink.addEventListener('click', event => {
+        arrowUp.style.display = "none";
+    });
+
+    let otherLink = document.querySelectorAll('.other-link');
+
+    otherLink.forEach(el => {
+        el.addEventListener('click', event => {
+            arrowUp.style.display = "flex";
+        });
+    });
+}
+scrollToTop();
 

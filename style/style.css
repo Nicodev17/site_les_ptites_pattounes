@@ -43,12 +43,12 @@ nav ul li {
     text-align: center;
     padding: 5px 0px;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 nav ul li:hover {
     background: white;
     color: rgb(95, 216, 247);
-    cursor: pointer;
     transition: background 0.1s ease-in;
 }
 
@@ -71,8 +71,9 @@ nav ul li:hover {
     min-height: 80vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-bottom: 120px;
+    align-items: center;
+    padding-bottom: 30px;
+    flex-direction: column;
     /* border: 2px solid rgb(87, 87, 214); */
 }
 
@@ -110,8 +111,6 @@ nav ul li:hover {
 }
 
 /**** SECTION INTRO ****/
-
-
 .intro-part img {
     width: 600px;
     border-radius: 40px;
@@ -132,6 +131,10 @@ h1 {
     font-size: 1.1em;
     color:rgb(95, 95, 95);
     text-align: justify;
+}
+
+.texte a {
+    color: rgb(160, 140, 250);
 }
 
 /**** AUTRES SECTIONS ****/
@@ -299,6 +302,28 @@ h3 {
     text-align: center;
 }
 
+/* FLECHE RETOUR EN HAUT */
+#box-arrow {
+    position: relative;
+    margin: 100px 40px 20px 0;
+    outline-style: none;
+    align-self: flex-end;
+}
+
+#box-arrow img {
+    width: 50px;
+    height: auto;
+    outline-style: none;
+    scale: 1;
+    transition: scale 200ms ease-in;
+    filter: opacity(80%);
+}
+
+#box-arrow img:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
 
 /*---------- FOOTER ----------*/
 footer {
@@ -457,7 +482,7 @@ footer p {
     }
 
     .tarifs-part li {
-        width: 80%;
+        width: 90%;
         text-align: left;
         margin-bottom: 10px;
     }
@@ -474,7 +499,7 @@ footer p {
     #box-contact {
         width: 75%;
         background: rgba(95, 217, 247, 0.233);
-        padding: 40px 50px;
+        padding: 20px 50px 30px 30px;
         border-radius: 20px;
     }
 
@@ -484,15 +509,24 @@ footer p {
     
     #box-horaires .subtitle {
         margin-bottom: 40px;
+        font-size: 1.05em;
     }
 
     #box-horaires p:not(#box-horaires .subtitle) {
         text-align: left;
-        padding-left: 20px;
+        padding-left: 10px;
+    }
+
+    /* FLECHE RETOUR EN HAUT */
+    #box-arrow {
+        margin: 50px 40px 10px 0;
+    }
+
+    #box-arrow img {
+        width: 35px;
     }
 
     /* FOOTER */
-
     footer p {
         font-size: 0.9em;
         padding: 0 30px;
